@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+    Route::post('users', "UserController@store");
 
-Route::post('users', "UserController@store");
-Route::get('options',function(){
-    return response()->json(\App\Models\Menu::all());
-});
+    Route::get('options',function(){
+        return response()->json(\App\Models\Menu::all());
+    });
+
+
 
 
